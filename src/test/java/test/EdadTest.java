@@ -15,11 +15,31 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class EdadTest {
     @Test
-    public void test2000Enero1() {
-        String valorEsperado = "Usted tiene 24 años";
-        String valorActual = Edad.evaluar(1, 1, 2024);
+    public void test1() {
+        String valorEsperado = "Usted tiene 23 años";
+        String valorActual = Edad.evaluar(31, 12, 2000);
         assertEquals(valorEsperado, valorActual);
     }
     
-    // TODO: Agrega tus otros casos de prueba aquí
+    @Test
+    public void test2() {
+        String valorEsperado = "Usted tiene 19 años";
+        String valorActual = Edad.evaluar(27, 8, 2005);
+        assertEquals(valorEsperado, valorActual);
+    }
+
+    @Test
+    public void test3() {
+        String valorEsperado = "Usted tiene 21 años";
+        String valorActual = Edad.evaluar(31, 8, 2003);
+        assertEquals(valorEsperado, valorActual);
+    }
+
+    @Test
+    public void test4() {
+        String valorEsperado = "Usted tiene 60 años";
+        String valorActual = Edad.evaluar(2, 9, 1964);
+        assertEquals(valorEsperado, valorActual);
+    }
+    
 }

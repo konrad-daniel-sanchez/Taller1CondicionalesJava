@@ -16,10 +16,29 @@ public class LetraONumeroTest {
     @Test
     public void testEsNumero() {
         String valorEsperado = "Es número";
-        String valorActual = LetraONumero.evaluar('c');
+        String valorActual = LetraONumero.evaluar('3');
         assertEquals(valorEsperado, valorActual);
     }
     
-    // TODO: Agrega tus otros casos de prueba aquí
+    @Test
+    public void testLetraMayuscula() {
+        String valorEsperado = "Es letra mayúscula";
+        String valorActual = LetraONumero.evaluar('Z');
+        assertEquals(valorEsperado, valorActual);
+    }
+
+    @Test
+    public void testLetraMinuscula() {
+        String valorEsperado = "Es letra minúscula";
+        String valorActual = LetraONumero.evaluar('l');
+        assertEquals(valorEsperado, valorActual);
+    }
+
+    @Test
+    public void testNoEsLetraNiNumero() {
+        String valorEsperado = "No es letra ni número";
+        String valorActual = LetraONumero.evaluar('*');
+        assertEquals(valorEsperado, valorActual);
+    }
     
 }
