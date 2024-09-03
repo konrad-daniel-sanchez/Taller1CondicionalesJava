@@ -4,3 +4,5 @@ nbproject/
 *.class
 
 target/
+
+.DS_Store
